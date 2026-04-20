@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {"id":"START","type":"start","text":"Good evening. Let's take a moment to reflect on your day."},
+
+    {"id":"Q1","type":"question","text":"How would you describe your day overall?","options":["Productive","Tough","Mixed","Frustrating"]},
+
+    {"id":"D1","type":"decision","rules":{
+      "Productive":"Q2A",
+      "Mixed":"Q2A",
+      "Tough":"Q2B",
+      "Frustrating":"Q2B"
+    }},
+
+    {"id":"Q2A","type":"question","text":"When things went well, what contributed most?","options":["My effort","Team collaboration","Planning","Adaptation"],"signal":"axis1:internal"},
+
+    {"id":"Q2B","type":"question","text":"When things didn’t go well, what did you feel first?","options":["Things were out of my control","Others didn’t support","I felt stuck","I waited for help"],"signal":"axis1:external"},
+
+    {"id":"Q3","type":"question","text":"During a challenge, what did you do?","options":["Took responsibility","Asked for help","Avoided it","Waited for resolution"],"signal":"axis1:internal"},
+
+    {"id":"R1","type":"reflection","text":"Your responses show how you viewed control today. Noticing your role in events is the first step toward growth."},
+
+    {"id":"BR1","type":"bridge","text":"Now let's shift from control to contribution."},
+
+    {"id":"Q4","type":"question","text":"Which best describes your contribution today?","options":["Helped someone","Completed my work","Expected recognition","Went beyond my role"],"signal":"axis2:contribution"},
+
+    {"id":"Q5","type":"question","text":"How did you react to others’ performance?","options":["Supported them","Ignored","Felt they should improve","Felt I deserved more"],"signal":"axis2:entitlement"},
+
+    {"id":"Q6","type":"question","text":"What motivated your actions today?","options":["Learning","Responsibility","Recognition","Pressure"],"signal":"axis2:contribution"},
+
+    {"id":"R2","type":"reflection","text":"Contribution builds trust and long-term growth. Even small efforts matter."},
+
+    {"id":"BR2","type":"bridge","text":"Now let's expand your perspective beyond yourself."},
+
+    {"id":"Q7","type":"question","text":"Who was most impacted by your work today?","options":["Myself","My team","A colleague","Customers"],"signal":"axis3:radius"},
+
+    {"id":"Q8","type":"question","text":"When facing a challenge, what did you think about most?","options":["My problem","Team impact","Shared responsibility","Customer outcome"],"signal":"axis3:radius"},
+
+    {"id":"Q9","type":"question","text":"While making decisions, who did you consider?","options":["Myself","Team","Manager","End users"],"signal":"axis3:radius"},
+
+    {"id":"Q10","type":"question","text":"How did you respond to others' difficulties?","options":["Ignored","Acknowledged","Helped","Took initiative"],"signal":"axis3:radius"},
+
+    {"id":"R3","type":"reflection","text":"Expanding your perspective helps reduce stress and creates meaningful impact."},
+
+    {"id":"SUMMARY","type":"summary","text":"Today you reflected on your actions, your contributions, and your impact. Awareness is the first step toward growth."},
+
+    {"id":"END","type":"end","text":"See you tomorrow."}
+  ]
+}
